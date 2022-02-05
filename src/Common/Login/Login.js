@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import logo from "./img/logo.svg";
 import "./login.scss";
 const Login = () => {
-  // let history = useHistory();
+  let history = useHistory();
   const [loginErr, setloginErr] = useState("");
   const [user, setUser] = useState({
     email: "",
@@ -25,7 +25,7 @@ const Login = () => {
         const errorMass = error.response.data;
         setloginErr(errorMass);
       });
-    // history.push("/");
+    history.push("/");
   };
   return (
     <div>
@@ -44,17 +44,21 @@ const Login = () => {
                 ) : null}
               </div>
               <div className="text-dangertyiu mb-3 text-start">
-                {loginErr ? (
-                  <div>
-                    {loginErr.message &&
-                      loginErr.message.map &&
-                      loginErr.message.map((item, i) => {
-                        return <li className="capitalize" key={i}>{item}</li>;
-                      })}
-                  </div>
-                ) : (
-                  loginErr.message
-                )}
+                {
+                    loginErr ? (
+                      Array.isArray(loginErr.message) ? (
+                          <div>
+                            {loginErr.message &&
+                                loginErr.message.map &&
+                                loginErr.message.map((item, i) => {
+                                  return <li className="capitalize" key={i}>{item}</li>;
+                                })}
+                          </div>
+                      ) : (
+                        <li>{loginErr.message}</li>
+                      )
+                    ) : (loginErr.message)
+                }
               </div>
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

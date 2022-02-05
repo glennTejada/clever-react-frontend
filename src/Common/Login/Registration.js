@@ -68,18 +68,22 @@ const Registration = () => {
                   </div>
                 ) : null}{" "}
               </div>
-              <div className="text-dangertyiu mb-3">
-                {loginErr ? (
-                  <div>
-                    {loginErr.message &&
-                      loginErr.message.map &&
-                      loginErr.message.map((item, i) => {
-                        return <li className="capitalize" key={i}>{item}</li>;
-                      })}
-                  </div>
-                ) : (
-                  loginErr.message
-                )}
+              <div className="text-dangertyiu mb-3 text-start">
+                {
+                  loginErr ? (
+                      Array.isArray(loginErr.message) ? (
+                          <div>
+                            {loginErr.message &&
+                                loginErr.message.map &&
+                                loginErr.message.map((item, i) => {
+                                  return <li className="capitalize" key={i}>{item}</li>;
+                                })}
+                          </div>
+                      ) : (
+                          <li>{loginErr.message}</li>
+                      )
+                  ) : (loginErr.message)
+                }
               </div>
               <Form onSubmit={handleSubmit}>
                 <Row>
