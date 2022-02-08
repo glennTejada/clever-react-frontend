@@ -1,0 +1,106 @@
+.login-main-area-wrap {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  .login-inner-wrap {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px #ddd;
+    padding: 50px 20px;
+    border-radius: 10px;
+    border: 2px;
+    border-style: dashed;
+    border-color: rgb(13 110 253 / 10%);
+  }
+  .login-logo {
+    img {
+      height: 60px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #9d9d9d;
+    }
+  }
+}
+.login-form-btn-hhcbhjfdaldif button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  background: #4d90fe;
+  border: none;
+}
+.text-dangertyiu {
+  color: red !important;
+}
+.login-main-area-wrap.registration {
+  .login-inner-wrap {
+    width: 767px;
+  }
+}
+.capitalize:first-letter {
+  text-transform: capitalize;
+}
+.reg-form-zjhfb .col-lg-6 {
+  text-align: left;
+}
+.react-responsive-modal-modal {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  .modal-popup-inner-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h2 {
+      text-align: center;
+      h1 {
+        color: #00c400;
+      }
+      i {
+        width: 70px;
+        height: 70px;
+        border: 4px solid #00c400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 50px;
+        color: #00c400;
+        margin: 5px auto;
+      }
+      a.success-goto-login-page {
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        background: #00c400;
+        padding: 10px 30px;
+        border-radius: 10px;
+        color: #fff;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+a.success-goto-login-page {
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  background: #00c400;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 5px;
+}
+.hero-main-area {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
